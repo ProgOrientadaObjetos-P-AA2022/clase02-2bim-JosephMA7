@@ -6,6 +6,10 @@ public class EstudiantePresencial extends Estudiante{
     int numeroCreditos;
     double costoCredito;
     double matriculaPresencial;
+
+    EstudiantePresencial(String nombre, String apellido, String identificacion, int edad) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     //  Métodos establecer y calcular para los datos o atributos de la clase
     // 2.  Método establecerNumeroCreditos(numero: Real)
@@ -38,5 +42,20 @@ public class EstudiantePresencial extends Estudiante{
     public double obtenerMatriculaPresencial(){
         return matriculaPresencial;
     }
-    
+     @Override
+    public String toString(){
+      
+        String cadenaFinal = String.format("%s", super.toString());
+        
+        cadenaFinal = String.format("%s\n"
+                + "Numero Creditos: %d\n"
+                + "Costo Creditos: %.2f\n"
+                + "Total Matricula: %.2f\n",
+                cadenaFinal,
+                obtenerNumeroCreditos(),
+                obtenerCostoCredito(),
+                obtenerMatriculaPresencial());
+        
+        return cadenaFinal;
+    }
 }

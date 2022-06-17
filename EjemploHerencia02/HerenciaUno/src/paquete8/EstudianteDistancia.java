@@ -71,5 +71,5 @@ public class EstudianteDistancia extends Estudiante{
         
         return cadenaFinal;
     }
-
+    
 }
